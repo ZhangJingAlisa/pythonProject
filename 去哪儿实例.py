@@ -34,6 +34,10 @@ action.perform()
 driver.find_element('name', 'date').send_keys(Keys.CONTROL, 'a')  # 全选日期
 driver.find_element('name', 'date').send_keys(Keys.BACK_SPACE)  # 回退，即删除之前的日期数据
 driver.find_element('name', 'date').send_keys(input_date(4))
+# 下面代码模拟选择了一个数据后将鼠标移出去后点击一下
+action.move_by_offset(0, 0)
+action.click()
+action.perform()
 
 # 点击预定
 driver.find_element('name', 'stsSearch').click()
