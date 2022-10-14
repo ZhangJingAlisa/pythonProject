@@ -14,4 +14,18 @@ pipeline{
         }
       }
     }
+
+    /*post {
+      always {
+
+//      为了让发送的邮件内容中的变量显示。则需要使用到junit来展示junitxml报告，首先需要在生成报告的python代码中生成xml报告，也需要让Jenkins pipeline让Jenkins能识别到xml文件
+        junit 'reports/result.xml'
+//      此处需要编写发送邮件的代码
+        emailext body: '''<html>
+                              <h1> total cases: ${TEST_COUNTS,var="total"}</h1>
+                          </html>''',
+                 subject: 'test pipeline',
+                 to: '3014517486@qq.com'
+      }
+    }*/
 }
